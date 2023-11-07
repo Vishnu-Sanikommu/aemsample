@@ -1,0 +1,24 @@
+<h3>Author Component with class and interface</h3>
+
+    <sly data-sly-use.author = "${'com.aemsample.core.models.Author' @ rAttribute='Test Attribute'}"/>
+
+    <div><b>First Name :</b> ${author.firstName}</div>
+    <div><b>Last Name :</b> ${author.lastName}</div>
+
+    <div data-sly-test = "${author.firstName && author.lastName}">
+    	<b>Full Name :</b> ${author.name}
+    </div>
+
+    <div><b>Page Text :</b> ${author.text}</div>
+    <div><b>Page Title :</b> ${author.pageTitle}</div>
+    <div><b>Modified By :</b> ${author.lastModifiedBy}  </div>
+
+     <div><b>Home Page :</b> ${author.homePage.toUpperCase}</div>
+     <div><b>Req Attribute :</b> ${author.requestAttribute.toLowerCase}</div>
+
+=================Books=====================
+
+
+     <sly data-sly-list = ${author.books}>
+    	     <p><b>${itemList.count}.</b> ${item}</p> 
+     </sly>

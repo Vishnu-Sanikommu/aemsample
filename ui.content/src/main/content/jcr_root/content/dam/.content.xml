@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:rep="internal"
+    dam:bulkUpdate="true"
+    jcr:mixinTypes="[mix:lockable,rep:AccessControllable]"
+    jcr:primaryType="sling:OrderedFolder"
+    mode="hard">
+    <aemgeeks/>
+    <wknd-events/>
+    <aem-task1/>
+    <assets-from-sample-package/>
+    <projects/>
+    <catalogs/>
+    <we-retail-screens/>
+    <formsanddocuments/>
+    <we-retail/>
+    <jcr:content/>
+    <collections/>
+    <dam:batch/>
+    <assetinsights/>
+    <templates/>
+    <formsanddocuments-themes/>
+    <demo/>
+    <core-components-examples/>
+    <heroImage.jpg/>
+    <rep:policy/>
+    <aemsample/>
+</jcr:root>

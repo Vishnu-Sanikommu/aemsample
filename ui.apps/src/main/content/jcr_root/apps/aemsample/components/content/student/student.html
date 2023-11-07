@@ -1,0 +1,9 @@
+
+<h3>Student Component only with interface</h3>
+
+    <sly data-sly-use.student = "com.aemsample.core.models.Student" />
+
+    <div>First Name : ${student.firstName}</div>
+    <div data-sly-test="${student.lastName}">
+    Last Name : ${student.lastName}</div>
+    <div>Describe : ${student.describe}</div>

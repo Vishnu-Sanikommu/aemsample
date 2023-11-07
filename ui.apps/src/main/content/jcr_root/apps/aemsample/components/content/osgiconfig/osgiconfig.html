@@ -1,0 +1,40 @@
+<h3>OSGiConfig component.</h3>
+
+<sly data-sly-use.osgiConfig = "com.aemsample.core.models.OSGiConfigDemo" />
+
+============================OCD inside model==============================
+
+    <div> Service Name: ${osgiConfig.serviceName}</div>
+    
+    <div> Service Count: ${osgiConfig.serviceCount}</div>
+    
+    <div> LiveData: ${osgiConfig.isLiveData}</div>
+    <div> Run Mode: ${osgiConfig.runModes}</div>
+    
+    <div><b>Countries:</b></div>
+    
+    <div data-sly-list.item = "${osgiConfig.countries}">
+        <p>${itemList.count} : ${item} </p>
+    </div>
+
+============================OCD in Separate Class or Interface============
+
+    <div> Service ID: ${osgiConfig.serviceId}</div>
+    <div> Service Name: ${osgiConfig.name}</div>
+    <div> Service URL: ${osgiConfig.serviceUrl}</div>
+
+
+============================OSGI Factory Configuration====================
+
+    <div data-sly-list="${osgiConfig.allConfigs}">
+     ------Config # <b>${itemList.count}</b>-----
+        <div> Config ID: ${item.configId}</div>
+        <div> Service Name: ${item.serviceName}</div>
+        <div> Service URL: ${item.serviceUrl}</div>
+
+    </div>
+
+
+
+
+

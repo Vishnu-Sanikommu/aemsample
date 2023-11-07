@@ -1,0 +1,45 @@
+<h3>Author Books Multifield component</h3>
+
+<sly data-sly-use.authorbooks="com.aemsample.core.models.AuthorBooks"/>
+
+  <p><b>==================== USING SINGLE FIELD =============</b></p>
+
+  <div data-sly-list="${authorbooks.books}">
+  		<p><b>${itemList.count}.</b> ${item}</p>
+  </div>
+
+  <p><b>==================== USING MAP ======================</b></p>
+    <div data-sly-list.item="${authorbooks.bookDetailsWithMap}">
+        ---------------Book : ${itemList.count}--------------
+        <p> Book : <b>${item.bookname} </b></p>
+        <p> Subject : <b>${item.booksubject}</b> </p>
+        <p> Publish : <b>${item.publishyear}</b> </p>
+    </div>
+
+
+     <p><b>==================== USING BEAN ======================</b></p>
+
+	<div data-sly-list.bean="${authorbooks.bookDetailsWithBean}">
+        ---------------Book : ${beanList.count}--------------
+        <p> Book Name : <b>${bean.bookName} </b></p>
+        <p> Publish Date : <b>${'dd-MM-yyyy' @ format=bean.publishDate}</b> </p>
+        <p> Copies : <b>${bean.copies}</b> </p>
+    </div>
+
+	<p><b>==================== USING NESTED FIELD ======================</b></p>
+
+    <div data-sly-list = "${authorbooks.bookDetailsWithNestedField}">
+        ---------------Book : ${itemList.count}--------------
+        <p> Book Name : <b>${item.bookName}</b></p>
+        <p> Book Subject : <b>${item.bookSubject}</b></p>
+
+        <ul data-sly-list.edition = "${item.bookEditions}" style="list-style-type : none;">
+
+            <li> Book Edition : <b> ${edition.bookEdition} </b></li>
+            <li> Published Date : <b> ${'dd-MM-yyyy' @ format=edition.editionDate} </b></li>
+
+
+        </ul>
+
+
+    </div>

@@ -1,0 +1,18 @@
+
+
+    <sly data-sly-use.childPages = "com.aemsample.core.models.ChildPages" />
+
+    <h1>${childPages.pagePath}</h1>
+
+    <div data-sly-test = "${childPages.pagePath}">
+    <h3>${childPages.name}</h3>
+    </div>
+
+
+    <div data-sly-list.item="${childPages.pages}">
+        <p> Page ${itemList.count} Title : <b>${item.title} </b></p>
+        <p> Page ${itemList.count} Path : <a href="http://localhost:4502${item.path}.html"><b>${item.path}</b></a></b></p>
+
+	</div>
+
+
